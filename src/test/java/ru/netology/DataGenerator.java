@@ -51,17 +51,17 @@ public class DataGenerator {
         }
 
         public static Registration addUserPasswordInvalid() {
-            String password = getPassword();
-            Registration user = new Registration(getLogin(), password, "active");
-            registerUser(user);
-            return new Registration(getLogin(), password, "active");
-        }
-
-        public static Registration addUserLoginInvalid() {
             String login = getLogin();
             Registration user = new Registration(login, getPassword(), "active");
             registerUser(user);
             return new Registration(login, getPassword(), "active");
+        }
+
+        public static Registration addUserLoginInvalid() {
+            String password = getPassword();
+            Registration user = new Registration(getLogin(),password, "active");
+            registerUser(user);
+            return new Registration(getLogin(), password, "active");
         }
 
         public static Registration addUserBlocked() {
